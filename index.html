@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Chat Saver Privacy Policy</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;color:#14181f;background:#fff}
+h1{font-size:28px}h2{font-size:20px;margin-top:32px}li{margin:6px 0}
+@media(prefers-color-scheme:dark){body{background:#14171c;color:#e8ebf0}}</style></head><body><h1>Privacy Policy for AI Chat Saver</h1>
+<p>Last updated: November 9, 2026</p>
+<p>AI Chat Saver is a browser extension that lets you save a conversation from an AI chat website, search your saved conversations, and copy a conversation as a prompt to continue it in another AI. This policy describes exactly what the extension does with your data.</p>
+<h2>In short</h2>
+<ul>
+<li>Everything happens on your device. The extension has no server and sends no data anywhere.</li>
+<li>Saved chats are encrypted with a passphrase that only you know.</li>
+<li>There are no analytics, no ads, no trackers, and no remote code.</li>
+<li>We do not sell, share, or transfer your data, because we never receive it.</li>
+</ul>
+<h2>What the extension reads</h2>
+<ul>
+<li><strong>On ChatGPT (chatgpt.com, chat.openai.com), Claude (claude.ai) and Gemini (gemini.google.com):</strong> when you open the extension popup, it reads the conversation shown on the page: your messages, the AI's replies, the chat title and the page address (URL).</li>
+<li><strong>On any other website:</strong> nothing is read until you click "Read selected or page text". It then reads the text you selected, or if nothing is selected, the visible text of that page. The extension is given access to that one tab only for that action.</li>
+<li>It never reads your account details, cookies, passwords, browsing history, or other tabs.</li>
+</ul>
+<h2>What the extension stores, and where</h2>
+<ul>
+<li><strong>Saved chats:</strong> only when you click "Save to library". They are stored in your browser's own IndexedDB storage on your device, encrypted with AES-256-GCM. The encryption key is derived from your passphrase using PBKDF2 with SHA-256 (600,000 iterations).</li>
+<li><strong>Not encrypted:</strong> the date a chat was saved (used for auto-delete) and a one-way hash of the chat's URL (used to avoid duplicates). Titles, messages and URLs are inside the encrypted data.</li>
+<li><strong>Your passphrase:</strong> never stored and never sent anywhere. If you forget it, your saved chats cannot be recovered, by you or by us.</li>
+<li><strong>Unlock session:</strong> after you unlock, the derived key is held in your browser's temporary session memory (chrome.storage.session). It is cleared when you close the browser, press Lock, or after 15 minutes without activity.</li>
+<li><strong>Preferences:</strong> two settings are stored on your device (chrome.storage.local): whether to hide sensitive items, and how many days to keep saved chats.</li>
+</ul>
+<h2>What the extension does not do</h2>
+<ul>
+<li>It makes no network requests. Its pages are restricted by a Content Security Policy that blocks network connections (connect-src 'none'), and it loads no remote scripts or fonts.</li>
+<li>It does not collect analytics, usage statistics, crash reports, or identifiers.</li>
+<li>It does not use your data for advertising, profiling, creditworthiness, or any purpose other than the features you click.</li>
+<li>No person at the developer can see your data.</li>
+</ul>
+<h2>Protection of sensitive information</h2>
+<ul>
+<li>By default, before you save, export, or copy, the extension masks things that look like email addresses, phone numbers, card numbers, ID numbers, API keys, access tokens, private keys, and values after "password" or "secret". You can turn this off in the popup.</li>
+<li>This detection is pattern based. It can miss items and can occasionally mask harmless text. Please review before sharing.</li>
+<li>The extension also removes invisible characters that can be used to hide instructions in text.</li>
+<li>Copied prompts tell the receiving AI to ignore instructions inside the transcript that did not come from you.</li>
+</ul>
+<h2>Copies you create outside the extension</h2>
+<p>These are actions you choose, and the extension cannot protect the copies:</p>
+<ul>
+<li><strong>Downloads (.md, .json, "Export all"):</strong> saved as plain, unencrypted files in your Downloads folder. They may be backed up by services such as OneDrive or Google Drive on your computer.</li>
+<li><strong>Copy prompt:</strong> places the text on your clipboard. Your operating system or a clipboard manager (for example Windows clipboard history) may keep it.</li>
+<li><strong>"Copy and open [AI]":</strong> opens that AI's website in a new tab. The extension does not send your chat there. If you paste it, that company's own privacy policy applies to what you paste.</li>
+</ul>
+<h2>Retention and deletion</h2>
+<ul>
+<li>Saved chats are deleted automatically after 30 days by default. You can change this to 7 or 90 days, or never, in the library.</li>
+<li>You can delete a single chat, or use "Delete all data" to remove every saved chat and your passphrase setup.</li>
+<li>Uninstalling the extension removes its stored data from your browser. Files you downloaded and anything on your clipboard must be deleted by you.</li>
+</ul>
+<h2>Permissions and why they are needed</h2>
+<ul>
+<li><strong>activeTab and scripting:</strong> to read the current tab only when you click the extension, including the optional page-text feature on unsupported sites.</li>
+<li><strong>storage:</strong> to keep your two preferences and the temporary unlock session.</li>
+<li><strong>Access to chatgpt.com, chat.openai.com, claude.ai and gemini.google.com:</strong> so the extension can read the conversation on those sites. It reads it only when you open the popup.</li>
+</ul>
+<h2>Children</h2>
+<p>The extension is not directed at children under 13 and does not knowingly collect any data from anyone.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be published with an updated date. The extension will not start sending data off your device without a clear change to this policy and a new version of the extension.</p>
+<h2>Contact</h2>
+<p>[Your name or company] · [your-email@example.com]</p></body></html>
